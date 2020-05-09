@@ -1,0 +1,52 @@
+<%= form_with(model: city_information, local: true) do |form| %>
+  <% if city_information.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(city_information.errors.count, "error") %> prohibited this city_information from being saved:</h2>
+
+      <ul>
+        <% city_information.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.text_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city_name %>
+    <%= form.text_field :city_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city_about %>
+    <%= form.text_area :city_about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lat %>
+    <%= form.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lng %>
+    <%= form.text_field :lng %>
+  </div>
+
+  <div class="field">
+    <%= form.label :living_cost %>
+    <%= form.text_field :living_cost %>
+  </div>
+
+  <div class="field">
+    <%= form.label :best_time_visit %>
+    <%= form.text_field :best_time_visit %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
