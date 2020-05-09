@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+<%= link_to "New Place", new_city_information_place_path(@city_information) %>
+
+<p>
+  <strong>Image:</strong>
+  <%= @city_information.image %>
+</p>
+
+<p>
+  <strong>City name:</strong>
+  <%= @city_information.city_name %>
+</p>
+
+<p>
+  <strong>City about:</strong>
+  <%= @city_information.city_about %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @city_information.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @city_information.lng %>
+</p>
+
+<p>
+  <strong>Living cost:</strong>
+  <%= @city_information.living_cost %>
+</p>
+
+<p>
+  <strong>Best time visit:</strong>
+  <%= @city_information.best_time_visit %>
+</p>
+
+
+        <% @city_information.places.each do |place | %>
+           <tr>
+            <td> <%= place.place %> </td>
+            <td><%= image_tag(place.image, size: "100x100") %></td>
+            <td><%= place.description %></td>
+           </tr>
+        <% end %>
+
+<%= link_to 'Edit', edit_city_information_path(@city_information) %> |
+<%= link_to 'Back', city_informations_path %>

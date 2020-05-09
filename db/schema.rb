@@ -10,9 +10,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_08_172620) do
+
+ActiveRecord::Schema.define(version: 2020_05_07_205827) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+
+  create_table "city_informations", force: :cascade do |t|
+    t.string "image"
+    t.string "city_name"
+    t.text "city_about"
+    t.float "lat"
+    t.float "lng"
+    t.float "living_cost"
+    t.string "best_time_visit"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+
+
+  create_table "packages", force: :cascade do |t|
+    t.text "destination"
+    t.string "flight"
+    t.integer "hotel"
+    t.text "plan"
+    t.float "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.string "image"
+    t.string "place"
+    t.text "description"
+    t.bigint "city_information_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["city_information_id"], name: "index_places_on_city_information_id"
+  end
+
+  add_foreign_key "places", "city_informations"
 
 end
