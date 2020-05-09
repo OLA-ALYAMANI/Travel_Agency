@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Places from './Places'
 import axios from 'axios'
+import { Col, Card,Row } from "react-bootstrap";
+
 
 export default class City extends Component {
     state={
@@ -27,9 +29,14 @@ export default class City extends Component {
     ))
         return (
             <div>
-                <h2>*** city name {city_name} ***</h2>
+            <Col md={3} className="m-2">
+            <Card >
+            <Card.Title className={"text-center"} style={{backgroundColor:"rgb(244, 244, 244)"}}>*** city name {city_name} ***</Card.Title>
+
                 
                 {list_all_places}
+            </Card>  
+            </Col>
             </div>
         )
     }

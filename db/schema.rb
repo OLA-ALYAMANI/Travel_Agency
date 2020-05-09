@@ -10,13 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2020_05_07_205827) do
-
+ActiveRecord::Schema.define(version: 2020_05_08_204431) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
 
   create_table "city_informations", force: :cascade do |t|
     t.string "image"
@@ -30,7 +27,13 @@ ActiveRecord::Schema.define(version: 2020_05_07_205827) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-
+  create_table "city_infos", force: :cascade do |t|
+    t.string "city_name"
+    t.string "city_about"
+    t.string "city_image"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "packages", force: :cascade do |t|
     t.text "destination"
@@ -52,6 +55,13 @@ ActiveRecord::Schema.define(version: 2020_05_07_205827) do
     t.index ["city_information_id"], name: "index_places_on_city_information_id"
   end
 
-  add_foreign_key "places", "city_informations"
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
+  add_foreign_key "places", "city_informations"
 end
