@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { passCsrfToken } from '../util/helpers'
 import axios from 'axios'
+
 export default class Order extends Component {
     state ={
+        orderList:[],
         createNewOrder:{
             package:this.props.package,
             member:2
@@ -23,8 +25,10 @@ export default class Order extends Component {
         console.log('test test')
         axios.get('/orderList.json')
         .then(data =>{
-            console.log(data);
-      
+            console.log(data.data);
+            this.setState({
+                orderList:data.data
+            })
         }).catch(erorr=>{
             console.log(erorr);
             

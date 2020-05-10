@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Places from './Places'
 import axios from 'axios'
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {NavLink ,Link} from "react-router-dom";
+import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
 
 export default class City extends Component {
     state={
@@ -28,9 +30,16 @@ export default class City extends Component {
     ))
         return (
             <div>
-                {/* *** city name {city_name} ***
+        <Container className="mt-5" fluid >
+          <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
+          
+          <Card.Title className={"text-center"} style={{backgroundColor:"rgb(244, 244, 244)"}}>*** city name {city_name} ***</Card.Title>
 
-                {list_all_places} */}
+          {list_all_places}
+          <Button>clicck</Button>
+          </Row>
+        </Container>
+
 
             </div>
         )
