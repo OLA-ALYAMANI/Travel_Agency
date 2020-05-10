@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/create'
   get 'users/show'
+  post 'users/signup', to: 'users#create'
+  post '/auth/login', to: 'authentication#login'
 
   
   resources :city_informations do
