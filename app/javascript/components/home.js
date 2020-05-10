@@ -5,9 +5,11 @@ import Nav from './Navb'
 import City from './City'
 import Places from './Places'
 import Package from './Package'
+
 import { Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
+
 
 
 export default class home extends Component {
@@ -45,6 +47,9 @@ export default class home extends Component {
         })
 
     }
+    componentWillUnmount(){
+        
+    }
 
     
     render() {
@@ -61,8 +66,10 @@ export default class home extends Component {
         return (
 
             <div>
+
                     <Container className="mt-5"  >
           <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
+
             
                 {/* <h1>This is page HELLO in React</h1> */}
                 {/* # render list_all_city map */}
@@ -70,9 +77,11 @@ export default class home extends Component {
                   {list_all_city}
 
 
+
          </Row>
         </Container>  
         
+
        
                 {/* # render list_all_package map */}
                 {list_all_package}
