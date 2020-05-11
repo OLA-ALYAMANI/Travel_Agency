@@ -3,7 +3,7 @@ import { Row, Form, Col, Button, Alert } from 'react-bootstrap'
 import Axios from 'axios'
 
 
-export const SingUp = (props) => {
+export const Signup = (props) => {
     const [user, setUser] = useState({})// user info
     const [register , setRegister] = useState(false) // to show aleart
   
@@ -16,7 +16,8 @@ export const SingUp = (props) => {
         e.preventDefault()
         Axios.post('http://localhost:3000/users/signup', user)
             .then(res => {
-                    if (res.data.register){
+                console.log(res.data)
+                    if (res.data){
                         props.history.push('/signin')
                }else{
                         setRegister(true)
@@ -25,7 +26,7 @@ export const SingUp = (props) => {
                         }, 4000);
                     } 
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err.response))
     }
 //==================================================
     return (

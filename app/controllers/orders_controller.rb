@@ -24,24 +24,24 @@ class OrdersController < ApplicationController
   # POST /orders
   # POST /orders.json
 
-  # def createmee 
+  # def create 
   #   render json: { params: params }
   # end
-  
-  # def create
 
-  #   @order = Order.new(order_params)
+  def create
 
-  #   respond_to do |format|
-  #     if @order.save
-  #       format.html { redirect_to @order, notice: 'Order was successfully created.' }
-  #       format.json { render :show, status: :created, location: @order }
-  #     else
-  #       format.html { render :new }
-  #       format.json { render json: @order.errors, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
+    @order = Order.new(order_params)
+
+    respond_to do |format|
+      if @order.save
+        format.html { redirect_to @order, notice: 'Order was successfully created.' }
+        format.json { render :show, status: :created, location: @order }
+      else
+        format.html { render :new }
+        format.json { render json: @order.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   # PATCH/PUT /orders/1
   # PATCH/PUT /orders/1.json
@@ -76,5 +76,6 @@ class OrdersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def order_params
       params.require(:order).permit(:user_id, :package_id, :member)
+      
     end
 end

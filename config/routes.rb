@@ -28,10 +28,16 @@ Rails.application.routes.draw do
   get 'package', to: 'packages#index'
   get 'orderList', to: 'orders#index'
   
+  # API axios.post
+  post 'orderCreate' , to: 'orders#create'
+
+  # API axios.delete
+  delete 'orderDelete', to: 'orders#destroy'
+
   #test API axios.post
   post 'place2',to: 'places#create'
   post 'city_information2', to: 'city_informations#create'
-  # post 'orderCreate' , to: 'orders#createmee'
+
 
   
 end
