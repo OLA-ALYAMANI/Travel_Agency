@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
-import Home from './home'
+import Home from './Home'
 import About from './About'
 import Card from './Card'
 import City from './City'
@@ -10,11 +10,13 @@ import Package from './Package'
 import Logo from "./Tlogo.PNG"
 import Navb from './Navb'
 import Order from './Order'
-import {Signin} from './User/Signin.js'
+// import {Signin} from './User/Signin.js'
 import {Signup} from './User/Signup'
 import ShoppingCard from './ShoppingCard'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { SingUp } from './User/Signup'
+import Signin  from './User/Signin'
 
 export default class App extends Component {
     render() {
