@@ -30,7 +30,7 @@ export default class City extends Component {
     ))
         return (
             <div>
-        <Container className="mt-5" fluid >
+        {/* <Container className="mt-5" fluid >
           <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
           
           <Card.Title className={"text-center"} style={{backgroundColor:"rgb(244, 244, 244)"}}>*** city name {city_name} ***</Card.Title>
@@ -38,7 +38,7 @@ export default class City extends Component {
           {list_all_places}
           <Button>clicck</Button>
           </Row>
-        </Container>
+        </Container> */}
 
 
             </div>

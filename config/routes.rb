@@ -17,7 +17,8 @@ Rails.application.routes.draw do
 
 
   #root path localhost:3000 --> render javascript/packs/hello_react.jsx
-  root 'city_informations#index'
+  # root 'city_informations#index'
+  # get '*path', to:'city_informations#index'
   # root 'orders#index'
 
 
@@ -36,6 +37,8 @@ Rails.application.routes.draw do
   post 'users/signup', to: 'users#create'
   post '/auth/login', to: 'authentication#login'
   # post 'orderCreate' , to: 'orders#createmee'
-
-  
+  post 'orderCreate' , to: 'orders#create'
+#root path localhost:3000 --> render javascript/packs/hello_react.jsx
+  root 'city_informations#index'
+  get '*path', to:'city_informations#index'
 end

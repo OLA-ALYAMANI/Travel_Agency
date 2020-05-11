@@ -17,7 +17,7 @@ export default class ShoppingCard extends Component {
     render() {
         return (
             <div>
-                
+                <h1>shopping card in process ...</h1>
             </div>
         )
     }

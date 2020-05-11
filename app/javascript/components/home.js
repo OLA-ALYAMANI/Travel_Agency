@@ -12,7 +12,7 @@ import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
 
 
 
-export default class home extends Component {
+export default class Home extends Component {
 
     state = {
         city_information_model:[],
@@ -24,7 +24,7 @@ export default class home extends Component {
         //get city information data
         axios.get('/city_information.json')
         .then(data =>{
-            console.log(data.data.city);
+            // console.log(data.data.city);
             this.setState({
                 city_information_model:data.data.city,
                 
@@ -37,7 +37,7 @@ export default class home extends Component {
         //get package data
         axios.get('/package.json')
         .then(third_data=>{
-            console.log(third_data.data);
+            // console.log(third_data.data);
             this.setState({
                 package_model:third_data.data
             })   
@@ -66,7 +66,7 @@ export default class home extends Component {
         return (
 
             <div>
-
+{/* 
                     <Container className="mt-5"  >
           <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
 
@@ -74,18 +74,21 @@ export default class home extends Component {
                 {/* <h1>This is page HELLO in React</h1> */}
                 {/* # render list_all_city map */}
 
-                  {list_all_city}
+                  {/* {list_all_city} */}
 
 
 
-         </Row>
-        </Container>  
+         {/* </Row>
+        </Container>   */}
         
 
+        <Container className="mt-5" fluid >
+          <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
        
                 {/* # render list_all_package map */}
                 {list_all_package}
-                
+         </Row>
+        </Container> 
             </div>
         )
     }

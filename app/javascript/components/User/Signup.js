@@ -3,7 +3,7 @@ import { Row, Form, Col, Button, Alert } from 'react-bootstrap'
 import Axios from 'axios'
 
 
-export const SingUp = (props) => {
+export const Signup = (props) => {
     const [user, setUser] = useState({})// user info
     const [register , setRegister] = useState(false) // to show aleart
   console.log(user)
@@ -16,8 +16,9 @@ export const SingUp = (props) => {
         e.preventDefault()
         Axios.post('http://localhost:3000/users/signup', user)
             .then(res => {
+                console.log(res.data)
                     if (res.data){
-                        props.history.push('/login')
+                        props.history.push('/signin')
                }else{
                         setRegister(true)
                         setTimeout(() => {
@@ -25,14 +26,14 @@ export const SingUp = (props) => {
                         }, 4000);
                     } 
             })
-            .catch(err => console.log(err))
+            .catch(err => console.log(err.response))
     }
 //==================================================
     return (
         <div className="logout-component">
-            {register && <Alert variant={"danger"}>
+            {/* {register && <Alert variant={"danger"}>
               the email used . plz change the email 
-            </Alert> }
+            </Alert> } */}
             <Form className="mt-5" >
                 <Row className="justify-content-center mt-5">
                     <Col md={8}>
