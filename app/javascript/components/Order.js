@@ -1,29 +1,43 @@
 import React, { Component } from 'react'
 import { passCsrfToken } from '../util/helpers'
+import axios from 'axios'
+
 export default class Order extends Component {
     state ={
-        createNewPlace:{
-            image:"km",place:"test place",description:"test des",city_information_id:1},
-        city_create:{
-            image:'magic?',
-
+        orderList:[],
+        createNewOrder:{
+            package:this.props.package,
+            member:2
         }
+  
     }
     componentDidMount(){
+        console.log("test test")
         // passCsrfToken(document, axios)
         // axios.post(
-        //     "/city_information2",
-        //     this.state.city_create
+        //     "/orderCreate",
+        //     this.state.createNewOrder
         //   ).then((res)=>{
-        //       console,log(res)
+        //       console.log(res)
         //   }).catch(erorr=>{
         //       console.log(erorr)
         //   })
+        console.log('test test')
+        axios.get('/orderList.json')
+        .then(data =>{
+            console.log(data.data);
+            this.setState({
+                orderList:data.data
+            })
+        }).catch(erorr=>{
+            console.log(erorr);
+            
+        })
     }
     render() {
         return (
             <div>
-                
+                <h1>hi order</h1>
             </div>
         )
     }

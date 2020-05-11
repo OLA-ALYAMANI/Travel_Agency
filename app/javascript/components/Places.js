@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Col, Card,Row } from "react-bootstrap";
+// import { Col, Card,Row } from "react-bootstrap";
 
 export default class Places extends Component {
     render() {
@@ -7,11 +7,9 @@ export default class Places extends Component {
 
         return (
             <div>
-            <Col md={3} className="m-2">
-            <Card >
-            <Card.Title className={"text-center"} style={{backgroundColor:"green"}}>place name {place}</Card.Title>
-            </Card>
-            </Col>
+                place name {place}
+
+   
             </div>
         )
     }
