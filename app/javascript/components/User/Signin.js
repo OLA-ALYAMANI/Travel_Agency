@@ -17,6 +17,7 @@ useEffect(() => {
         e.preventDefault()
         Axios.post('http://localhost:3000/auth/login', signin)
         .then(res =>{
+            console.log(res.data.token)
             if (res.data.token ){
 
                 localStorage.setItem('token' ,res.data.token )
@@ -30,7 +31,7 @@ useEffect(() => {
 
             
         })
-        .catch(err => console.log(err))
+        .catch(err => console.log(err.response))
     }
     return (
         <div className="login-component">

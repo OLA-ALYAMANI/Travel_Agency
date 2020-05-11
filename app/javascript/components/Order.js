@@ -5,7 +5,7 @@ import axios from 'axios'
 export default class Order extends Component {
     state ={
             user:[],
-            package:[],
+            package_id:[],
             member:8
   
     }
@@ -31,11 +31,11 @@ export default class Order extends Component {
         .then(res =>{
             console.log(res.data);
             this.setState({
-                package: res.data.filter(
+                package_id: res.data.filter(
                   (element) => element.id == this.props.match.params.id
                 )[0].id,
               });
-              console.log("heee"+this.state.package)
+              console.log("heee"+this.state.package_id)
               this.postOrder()
               //back to package page
             //   this.props.history.push('/home')
@@ -52,7 +52,7 @@ export default class Order extends Component {
         return (
             <div>
                 <h1>hi order</h1>
-              <h2>  {this.state.package.id} </h2>
+              <h2>  {this.state.package_id.id} </h2>
             </div>
         )
     }
