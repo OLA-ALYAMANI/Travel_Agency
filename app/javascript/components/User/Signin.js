@@ -1,8 +1,10 @@
 import React , {useState , useEffect} from 'react'
 import { Form, Button, Col, Row} from 'react-bootstrap'
-import Axios from 'axios'
 
-export const Signin = (props) => {
+import Axios from 'axios'
+import { withRouter } from 'react-router-dom'
+
+const Signin = (props) => {
 const [signin , setSignin] = useState({})
 
 
@@ -15,13 +17,13 @@ useEffect(() => {
 
     let onSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/auth/login', signin)
+        Axios.post('/auth/login', signin)
         .then(res =>{
             console.log(res.data.token)
             if (res.data.token ){
 
                 localStorage.setItem('token' ,res.data.token )
-                props.userLogin()
+                // props.userLogin()
                 props.history.push('/home')
             }else {
 
@@ -31,7 +33,7 @@ useEffect(() => {
 
             
         })
-        .catch(err => console.log(err.response))
+        .catch(err => console.log(err))
     }
     return (
         <div className="login-component">
@@ -58,3 +60,4 @@ useEffect(() => {
         </div>
     )
 }
+export default withRouter(Signin);
