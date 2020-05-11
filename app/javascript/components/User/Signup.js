@@ -6,7 +6,7 @@ import Axios from 'axios'
 export const Signup = (props) => {
     const [user, setUser] = useState({})// user info
     const [register , setRegister] = useState(false) // to show aleart
-  
+  console.log(user)
     //to add the input inside user
     let onChangeInput = ({ target: { name, value } }) => {
         setUser({ ...user, [name]: value })
@@ -14,7 +14,7 @@ export const Signup = (props) => {
     // to add the user info to database
     let onSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/users/signup', user)
+        Axios.post('/users/signup', user)
             .then(res => {
                 console.log(res.data)
                     if (res.data){
@@ -31,9 +31,9 @@ export const Signup = (props) => {
 //==================================================
     return (
         <div className="logout-component">
-            {register && <Alert variant={"danger"}>
+            {/* {register && <Alert variant={"danger"}>
               the email used . plz change the email 
-            </Alert> }
+            </Alert> } */}
             <Form className="mt-5" >
                 <Row className="justify-content-center mt-5">
                     <Col md={8}>

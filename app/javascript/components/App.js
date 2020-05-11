@@ -11,11 +11,13 @@ import Package from './Package'
 import Logo from "./Tlogo.PNG"
 import Navb from './Navb'
 import Order from './Order'
-import {Signin} from './User/Signin.js'
+// import {Signin} from './User/Signin.js'
 import {Signup} from './User/Signup'
 import ShoppingCard from './ShoppingCard'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import { SingUp } from './User/Signup'
+import Signin  from './User/Signin'
 
 
 export default class App extends Component {
