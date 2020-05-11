@@ -1,3 +1,5 @@
+// صفحة مؤقته لحفظ الكود مو حق شي 
+
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
@@ -11,7 +13,7 @@ import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
 
 
 
-export default class Home extends Component {
+export default class home extends Component {
 
     state = {
         city_information_model:[],
@@ -23,7 +25,7 @@ export default class Home extends Component {
         //get city information data
         axios.get('/city_information.json')
         .then(data =>{
-            // console.log(data.data.city);
+            console.log(data.data.city);
             this.setState({
                 city_information_model:data.data.city,
                 
@@ -36,7 +38,7 @@ export default class Home extends Component {
         //get package data
         axios.get('/package.json')
         .then(third_data=>{
-            // console.log(third_data.data);
+            console.log(third_data.data);
             this.setState({
                 package_model:third_data.data
             })   
@@ -65,29 +67,15 @@ export default class Home extends Component {
         return (
 
             <div>
-{/* 
-                    <Container className="mt-5"  >
-          <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
-
             
                 {/* <h1>This is page HELLO in React</h1> */}
                 {/* # render list_all_city map */}
 
-                  {/* {list_all_city} */}
-
-
-
-         {/* </Row>
-        </Container>   */}
-        
-
-        <Container className="mt-5" fluid >
-          <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
+                  {list_all_city}
        
                 {/* # render list_all_package map */}
                 {list_all_package}
-         </Row>
-        </Container> 
+                
             </div>
         )
     }

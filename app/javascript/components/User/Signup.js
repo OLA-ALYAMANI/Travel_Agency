@@ -14,7 +14,7 @@ export const Signup = (props) => {
     // to add the user info to database
     let onSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/users/signup', user)
+        Axios.post('/users/signup', user)
             .then(res => {
                 console.log(res.data)
                     if (res.data){

@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   end
   resources :places
   resources :packages
+  
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
@@ -31,6 +32,12 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/show'
   
+  # API axios.post
+  post 'orderCreate' , to: 'orders#create'
+
+  # API axios.delete
+  delete 'orderDelete', to: 'orders#destroy'
+
   #test API axios.post
   post 'place2',to: 'places#create'
   post 'city_information2', to: 'city_informations#create'
