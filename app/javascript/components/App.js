@@ -3,10 +3,12 @@ import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import Home from './home'
 import About from './About'
-import Nav from './Navb'
+import Card from './Card'
 import City from './City'
 import Places from './Places'
 import Package from './Package'
+import Logo from "./Tlogo.PNG"
+import Navb from './Navb'
 import Order from './Order'
 import {Signin} from './User/Signin.js'
 import {Signup} from './User/Signup'
@@ -19,10 +21,11 @@ export default class App extends Component {
         return (
              <div>
         <Router>
-        <Nav/>
+        <Navb/>
         <Switch>
            <Route path='/home' component ={Home}/>
            <Route exact path="/About" component={About} />
+
           <Route exact path="/places/:id" component={Places} />
           <Route exact path="/new_post" component={Package} />
           <Route path="/orderPackage/:id" component={Order} />
@@ -32,6 +35,7 @@ export default class App extends Component {
           <Route exact path="/package" component={Package} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
+
         </Switch>
         </Router>
 
