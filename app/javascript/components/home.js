@@ -1,18 +1,10 @@
 import React, { Component } from 'react'
-<<<<<<< HEAD
+
 import { Navbar, Nav, Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 import Navb from './Navb'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
-var sectionStyle = {
-    width: "100%",
-    height: "570px",
-
-};
-export default class home extends Component {
-=======
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import Nav from './Navb'
@@ -24,9 +16,18 @@ import { Route, Switch } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
 
+var sectionStyle = {
+    width: "100%",
+    height: "570px",
 
-
+};
 export default class home extends Component {
+
+
+
+
+
+
     
     render() {
         return (
