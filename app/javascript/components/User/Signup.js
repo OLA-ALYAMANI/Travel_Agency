@@ -16,7 +16,7 @@ export const SingUp = (props) => {
         e.preventDefault()
         Axios.post('http://localhost:3000/users/signup', user)
             .then(res => {
-                    if (res.data.register){
+                    if (res.data){
                         props.history.push('/login')
                }else{
                         setRegister(true)
