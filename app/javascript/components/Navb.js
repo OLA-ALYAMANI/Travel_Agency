@@ -19,7 +19,7 @@ export default class Navb extends Component {
                     Travel
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="/Home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/Card">Card</Nav.Link>
                         <Nav.Link as={Link} to="/About">About</Nav.Link>
                         {/* <Nav.Link as={Link} to="/city">city</Nav.Link> */}
