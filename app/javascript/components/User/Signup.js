@@ -6,7 +6,7 @@ import Axios from 'axios'
 export const SingUp = (props) => {
     const [user, setUser] = useState({})// user info
     const [register , setRegister] = useState(false) // to show aleart
-  
+  console.log(user)
     //to add the input inside user
     let onChangeInput = ({ target: { name, value } }) => {
         setUser({ ...user, [name]: value })
@@ -17,7 +17,7 @@ export const SingUp = (props) => {
         Axios.post('http://localhost:3000/users/signup', user)
             .then(res => {
                     if (res.data.register){
-                        props.history.push('/signin')
+                        props.history.push('/login')
                }else{
                         setRegister(true)
                         setTimeout(() => {

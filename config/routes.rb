@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
 
   resources :orders
-  get 'users/index'
-  get 'users/create'
-  get 'users/show'
-  post 'users/signup', to: 'users#create'
-  post '/auth/login', to: 'authentication#login'
+  # get 'users/index'
+  # get 'users/create'
+  # get 'users/show'
+  
 
   
   resources :city_informations do
@@ -27,10 +26,15 @@ Rails.application.routes.draw do
   get 'place',to: 'places#index'
   get 'package', to: 'packages#index'
   get 'orderList', to: 'orders#index'
+  get 'users/index'
+  get 'users/create'
+  get 'users/show'
   
   #test API axios.post
   post 'place2',to: 'places#create'
   post 'city_information2', to: 'city_informations#create'
+  post 'users/signup', to: 'users#create'
+  post '/auth/login', to: 'authentication#login'
   # post 'orderCreate' , to: 'orders#createmee'
 
   
