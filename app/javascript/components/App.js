@@ -5,6 +5,7 @@ import Home from './Home'
 import About from './About'
 import Card from './Card'
 import City from './City'
+import Footer from './Footer'
 import Places from './Places'
 import Package from './Package'
 import Logo from "./Tlogo.PNG"
@@ -18,12 +19,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { SingUp } from './User/Signup'
 import Signin  from './User/Signin'
 
+
 export default class App extends Component {
     render() {
         return (
              <div>
         <Router>
         <Navb/>
+        <Home/>
+        
         <Switch>
            <Route path='/home' component ={Home}/>
            <Route exact path="/About" component={About} />
@@ -39,6 +43,9 @@ export default class App extends Component {
           <Route path="/signup" component={Signup} />
 
         </Switch>
+        <div className="landing">
+        <Footer/>
+        </div>
         </Router>
 
         {/* <Home></Home> */}
