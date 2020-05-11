@@ -10,7 +10,6 @@ export default class Order extends Component {
   
     }
     postOrder(){
-        
         setTimeout(() => {
             console.log("test test")
             passCsrfToken(document, axios)
@@ -24,6 +23,8 @@ export default class Order extends Component {
                   console.log(erorr)
               })
         }, 1000)
+        //back to package page
+        // this.props.history.push('/package')
       }
     componentDidMount(){
         //1- list all package 
@@ -37,8 +38,8 @@ export default class Order extends Component {
               });
               console.log("heee"+this.state.package_id)
               this.postOrder()
-              //back to package page
-            //   this.props.history.push('/home')
+              
+              
         }).catch(erorr=>{
             console.log(erorr);
             
@@ -51,8 +52,8 @@ export default class Order extends Component {
     render() {
         return (
             <div>
-                <h1>hi order</h1>
-              <h2>  {this.state.package_id.id} </h2>
+                <h1>Order</h1>
+              <h3>  order id = {this.state.package_id}  Is In Your Shopping Card </h3>
             </div>
         )
     }

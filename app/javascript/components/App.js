@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
-import home from './home'
+import Home from './home'
 import About from './About'
 import Nav from './Navb'
 import City from './City'
@@ -21,17 +21,21 @@ export default class App extends Component {
         <Router>
         <Nav/>
         <Switch>
-           <Route path='/home' component ={home}/>
+           <Route path='/home' component ={Home}/>
            <Route exact path="/About" component={About} />
-          <Route exact path="/places" component={Places} />
+          <Route exact path="/places/:id" component={Places} />
           <Route exact path="/new_post" component={Package} />
           <Route path="/orderPackage/:id" component={Order} />
           <Route path="/shoppingCard" component={ShoppingCard } />
-
+          
+          <Route exact path="/city" component={City} />
+          <Route exact path="/package" component={Package} />
           <Route path="/signin" component={Signin} />
           <Route path="/signup" component={Signup} />
         </Switch>
         </Router>
+
+        {/* <Home></Home> */}
          </div>
         )
     }

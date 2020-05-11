@@ -23,6 +23,8 @@ export default class Navb extends Component {
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
 
                         <Nav.Link as={Link} to="/About">About</Nav.Link>
+                        {/* <Nav.Link as={Link} to="/city">city</Nav.Link> */}
+
 
                     </Nav>
                     <Nav>
