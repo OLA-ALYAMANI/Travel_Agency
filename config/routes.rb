@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   #test API axios.post
   post 'place2',to: 'places#create'
   post 'city_information2', to: 'city_informations#create'
-  # post 'orderCreate' , to: 'orders#createmee'
+  post 'orderCreate' , to: 'orders#create'
 
   
 end
