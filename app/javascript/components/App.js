@@ -16,7 +16,7 @@ import ShoppingCart from './ShoppingCart'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { SingUp } from './User/Signup'
-import Signin  from './User/Signin'
+import {Signin}  from './User/Signin'
 
 
 export default class App extends Component {
@@ -42,10 +42,9 @@ export default class App extends Component {
              <div>
         <Router>
         <Navb/>
-        <Home/>
-        
         <Switch>
-           <Route path='/home' component ={Home}/>
+           <Route exact path='/' component ={Home}/>
+           <Route exact path='/home' component ={Home}/>
            <Route exact path="/About" component={About} />
 
           <Route exact path="/places/:id" component={Places} />
