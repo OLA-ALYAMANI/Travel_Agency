@@ -14,6 +14,7 @@ export default class PackageCard extends Component {
                 <h1> {destination}</h1>
                 <h1>{price}</h1>
                 <h1>{id}</h1>
+                <h1>{plan}</h1>
             <NavLink
               as={Link}
               to={`/orderPackage/${id}`}

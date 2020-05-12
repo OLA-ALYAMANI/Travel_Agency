@@ -5,11 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {NavLink ,Link} from "react-router-dom";
 import { Form, Container, Button,Row ,Col,Image, Card} from "react-bootstrap";
 import CityCard from './CityCard'
+
+
 export default class City extends Component {
     state = {
         city_information_model:[]  
     }
     componentDidMount(){
+        
         //get city information data
         axios.get('/city_information.json')
         .then(data =>{

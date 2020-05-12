@@ -19,7 +19,7 @@ export default class Navb extends Component {
                     Travel
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/">Home</Nav.Link>
                         <Nav.Link as={Link} to="/Card">Card</Nav.Link>
                         <Nav.Link as={Link} to="/About">About</Nav.Link>
                         {/* <Nav.Link as={Link} to="/city">city</Nav.Link> */}
@@ -29,9 +29,11 @@ export default class Navb extends Component {
                     <Nav>
 
                     <Button as={Link} to="/Signin" variant="outline-light" >  Sign In  </Button>
-                    <Button as={Link} to="/Signup" variant="outline-light" className="ml-3"> Sign Up</Button> 
-                    <Button as={Link} to="/shoppingCard" variant="outline-light" >  Shopping Card </Button>
-                    
+
+                    <Button as={Link} to="/Signup" variant="outline-light" className="ml-2"> Sign Up</Button> 
+
+                    <Button as={Link} to="/shoppingCard" variant="outline-light" className="ml-3">  Shopping Card </Button>
+
 
                     </Nav>
                 </Navbar>

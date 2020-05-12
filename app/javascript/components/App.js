@@ -3,8 +3,9 @@ import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import Home from './Home'
 import About from './About'
-import Card from './Card'
+
 import City from './City'
+import Footer from './Footer'
 import Places from './Places'
 import Package from './Package'
 import Logo from "./Tlogo.PNG"
@@ -18,12 +19,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import { SingUp } from './User/Signup'
 import Signin  from './User/Signin'
 
+
 export default class App extends Component {
+    componentDidMount(){
+        passCsrfToken(document, axios)
+        console.log("test token ")
+        //gets token from localstorage
+        let token = localStorage.getItem("token");
+        console.log("test token == "+token)
+        // let user = decode(token);
+        axios.get('/auth/current_user')
+        .then(data =>{
+            console.log(data);
+  
+        }).catch(erorr=>{
+            console.log(erorr);
+            
+        })
+        
+    }
     render() {
         return (
              <div>
         <Router>
         <Navb/>
+        <Home/>
+        
         <Switch>
            <Route path='/home' component ={Home}/>
            <Route exact path="/About" component={About} />
@@ -39,6 +60,9 @@ export default class App extends Component {
           <Route path="/signup" component={Signup} />
 
         </Switch>
+        <div className="landing">
+        <Footer/>
+        </div>
         </Router>
 
         {/* <Home></Home> */}

@@ -70,7 +70,7 @@ export default class ShoppingCard extends Component {
                 <h1>Your Packege Order are ...</h1>
                 <h1>package title :{this.state.foundPackage.destination}</h1>
                 <h1>price :{this.state.foundPackage.price}</h1>
-                <h1>member :{this.state.foundOrder.member}</h1>
+                {/* <h1>member :{this.state.foundOrder.member}</h1> */}
                 {/* <button onClick={this.deleteOrderHandler()}>Delete order</button> */}
                 <button>Update order</button>
             </div>

@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/create'
   get 'users/show'
-  
+  get '/auth/current_user', to: 'authentication#current_user'
   # API axios.post
   post 'orderCreate' , to: 'orders#create'
 
@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   post 'city_information2', to: 'city_informations#create'
   post 'users/signup', to: 'users#create'
   post '/auth/login', to: 'authentication#login'
-  # post 'orderCreate' , to: 'orders#createmee'
+  
   post 'orderCreate' , to: 'orders#create'
 #root path localhost:3000 --> render javascript/packs/hello_react.jsx
   root 'city_informations#index'
