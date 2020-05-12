@@ -3,7 +3,6 @@ import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import Home from './Home'
 import About from './About'
-import Card from './Card'
 import City from './City'
 import Footer from './Footer'
 import Places from './Places'
@@ -24,10 +23,8 @@ export default class App extends Component {
              <div>
         <Router>
         <Navb/>
-        <Home/>
-        
         <Switch>
-           <Route path='/home' component ={Home}/>
+           <Route exact path='/' component ={Home}/>
            <Route exact path="/About" component={About} />
 
           <Route exact path="/places/:id" component={Places} />

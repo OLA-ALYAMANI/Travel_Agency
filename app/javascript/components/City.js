@@ -34,10 +34,16 @@ export default class City extends Component {
         ))
         return (
             <div>
-         <Container className="mt-5" fluid >
-          <Row className="mt-5 justify-content-center" style={{padding:"0"}}>
-                <h1>city page</h1>
-                {list_all_city}
+         <Container className="mt-5 mb-5" fluid >
+          <Row className="justify-content-center" style={{padding:"0"}}>
+                <h1  >Discover KSA City</h1>
+                <br></br>
+          </Row>
+          <Row className="justify-content-center ml-5 mr-5 mt-3" >
+                <h6>We’re here to wow the world from first ‘hello’ to last ‘goodbye’ with tailor made itineraries for all kinds of travellers - whether luxury lovers or culture vultures. Here is a sample of an itinerary full of key highlights of our county.</h6>
+          </Row>
+          <Row className="justify-content-center" style={{padding:"0"}}>
+          {list_all_city}
           </Row>
         </Container>
             </div>

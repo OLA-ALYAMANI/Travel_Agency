@@ -1,7 +1,12 @@
 import React , {useState , useEffect} from 'react'
-import { Form, Button, Col, Row} from 'react-bootstrap'
+import { Row, Form, Col, Button, Alert, Container , Card , Input } from 'react-bootstrap'
 import Axios from 'axios'
 
+var sectionStyle = {
+    width: "100%",
+    height: "612px",
+
+};
 export const Signin = (props) => {
 const [signin , setSignin] = useState({})
 
@@ -34,27 +39,63 @@ useEffect(() => {
         .catch(err => console.log(err.response))
     }
     return (
-        <div className="login-component">
-           <Form className="mt-5">
-                <Row className="justify-content-center mt-5">
-                    <Col md={8}>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formGridEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" name="email" onChange={(e) => onChangeInput(e)} />
-                            </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridPassword">
-                                <Form.Label>Password</Form.Label>
-                                <Form.Control type="password" placeholder="Password" name="password" onChange={(e) => onChangeInput(e)} />
-                            </Form.Group>
-                        </Form.Row>
-                        <Button variant="outline-primary" type="submit" onClick={(e) => onSubmit(e)}>
-                            Sign in
-                    </Button>
-                    </Col>
-                </Row>
-            </Form>
+        <div>
+        <div className="landings">
+         <section style={sectionStyle}>
+            {/* {isLogin && (
+        <Alert variant={"danger"}>
+          the email used . please change the email
+        </Alert>
+      )} */}
+      <Container className="mt-5 mb-5  mr-5 ml-5"  >
+        <Row>
+        <Col className="ml-5 mr-5">
+             <h1>Travel Your Passion</h1>
+        </Col>
+          <Col className="ml-5 mr-5" >
+            <Card className="card-register ml-5 mr-5 mt-5" style={{ width: "30rem" }}>
+              <h3 className="title mx-auto" style={{ fontSize: "34px" }}>
+                Welcome back our Traveler
+              </h3>
+              <Form className="register-form mr-3 ml-3">
+
+                <label ClassName="mt-5">Email</label>
+                <Form.Control 
+                className="mb-3 "
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  onChange={(e) => onChangeInput(e)}
+                />
+
+                <label ClassName="mt-5" >Password</label>
+                <Form.Control 
+                className="mb-3 "
+                  placeholder="Password"
+                  type="password"
+                  name="password"
+                  onChange={(e) => onChangeInput(e)}
+                />
+
+                <Button
+                  block
+                  className="btn-round  mt-3 mb-3"
+                  color="warning"
+                  bg="light" variant="warning"
+                  type="submit"
+                  onClick={(e) => onSubmit(e)}
+                >
+                  Sign in
+                </Button>
+              </Form>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      </section>
+        </div>
         </div>
     )
 }
+
