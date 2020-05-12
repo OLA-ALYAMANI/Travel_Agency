@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { passCsrfToken } from '../util/helpers'
 import ShoppingCartCard from './ShoppingCartCard'
 import {Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
@@ -9,7 +8,7 @@ export default class ShoppingCard extends Component {
     _isMounted = false;
 
     state={
-        user_id:2,
+        user_id:5,
         foundOrder:[]
     }
 
@@ -19,8 +18,8 @@ export default class ShoppingCard extends Component {
         //Found order in DB
         axios.get('/orderList.json')
         .then(res =>{
-            console.log("krack")
-            console.log(res);
+            // console.log("krack")
+            // console.log(res);
             this.setState({
                 foundOrder: res.data.filter(
                   (element) => element.user_id == this.state.user_id
@@ -51,8 +50,8 @@ export default class ShoppingCard extends Component {
             <div>
                 {list_all_order}
                 <br></br>
-             {console.log("iuj")}
-             {console.log(this.state.foundOrder)}
+             {/* {console.log("iuj")}
+             {console.log(this.state.foundOrder)} */}
 
                 <Button as={Link} to="/" bg="light" variant="warning" className="ml-3 mb-5 big" style={{textAlign:"center" ,marginLeft:'90px'}}> Continue Payment</Button>
 
