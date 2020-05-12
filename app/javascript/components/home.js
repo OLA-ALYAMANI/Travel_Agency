@@ -1,18 +1,24 @@
 import React, { Component } from 'react'
+
 import {Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 
 var sectionStyle = {
     width: "100%",
-    height: "612px",
+    height: "650px",
 
 };
 
 export default class Home extends Component {
+
     render() {
+
+
         return (
+
             <div>
+
 <div className="landing">
             
             <section style={sectionStyle}>
@@ -28,8 +34,7 @@ export default class Home extends Component {
             
             </div>
             </div>
+
         )
     }
 }
-
-

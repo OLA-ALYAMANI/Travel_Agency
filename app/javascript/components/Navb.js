@@ -29,9 +29,11 @@ export default class Navb extends Component {
                     <Nav>
 
                     <Button as={Link} to="/Signin" variant="outline-light" >  Sign In  </Button>
+
                     <Button as={Link} to="/Signup" variant="outline-light" className="ml-2"> Sign Up</Button> 
 
                     <Button as={Link} to="/shoppingCard" variant="outline-light" className="ml-3">  Shopping Card </Button>
+
 
                     </Nav>
                 </Navbar>
