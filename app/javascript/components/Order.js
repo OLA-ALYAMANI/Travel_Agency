@@ -51,7 +51,7 @@ export default class Order extends Component {
     }
     render() {
         return (
-            <div>
+            <div style={{textAlign: "center"}}>
                 <h1>Order</h1>
                 <h3>  The order id = {this.state.package_id} Is In Your Shopping Card </h3>
             </div>
