@@ -3,7 +3,6 @@ import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import Home from './Home'
 import About from './About'
-
 import City from './City'
 import Footer from './Footer'
 import Places from './Places'
