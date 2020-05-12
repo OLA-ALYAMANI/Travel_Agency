@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { passCsrfToken } from '../util/helpers'
 import axios from 'axios'
+import { Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 
 export default class Order extends Component {
     state = {
@@ -53,7 +55,8 @@ export default class Order extends Component {
         return (
             <div style={{textAlign: "center"}}>
                 <h1>Order</h1>
-                <h3>  The order id = {this.state.package_id} Is In Your Shopping Card </h3>
+                <h3>  Order {this.state.package_id} Is In Your Shopping Card </h3>
+                <Button as={Link} to="/Package" variant="warning" className="ml-3 mb-5 big">Back</Button>
             </div>
         )
     }
