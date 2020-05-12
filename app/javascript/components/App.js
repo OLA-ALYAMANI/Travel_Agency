@@ -12,7 +12,7 @@ import Navb from './Navb'
 import Order from './Order'
 // import {Signin} from './User/Signin.js'
 import {Signup} from './User/Signup'
-import ShoppingCard from './ShoppingCard'
+import ShoppingCart from './ShoppingCart'
 import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { SingUp } from './User/Signup'
@@ -26,8 +26,8 @@ export default class App extends Component {
         //gets token from localstorage
         let token = localStorage.getItem("token");
         console.log("test token == "+token)
-        // let user = decode(token);
-        axios.get('/auth/current_user')
+    
+        axios.get('/auth/current_user', { 'headers': { 'Authorization': token } })
         .then(data =>{
             console.log(data);
   
@@ -51,7 +51,7 @@ export default class App extends Component {
           <Route exact path="/places/:id" component={Places} />
           <Route exact path="/new_post" component={Package} />
           <Route path="/orderPackage/:id" component={Order} />
-          <Route path="/shoppingCard" component={ShoppingCard } />
+          <Route path="/shoppingCard" component={ShoppingCart} />
           
           <Route exact path="/city" component={City} />
           <Route exact path="/package" component={Package} />

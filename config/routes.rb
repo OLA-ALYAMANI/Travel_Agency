@@ -17,12 +17,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
 
-  #root path localhost:3000 --> render javascript/packs/hello_react.jsx
-  # root 'city_informations#index'
-  # get '*path', to:'city_informations#index'
-  # root 'orders#index'
-
-
   # API axios.get
   get 'city_information',to: 'city_informations#displayAllCity'
   get 'place',to: 'places#index'
@@ -31,21 +25,21 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'users/create'
   get 'users/show'
+  # Api axios.get --> to take user_id 
   get '/auth/current_user', to: 'authentication#current_user'
+
   # API axios.post
-  post 'orderCreate' , to: 'orders#create'
-
-  # API axios.delete
-  delete 'orderDelete', to: 'orders#destroy'
-
-  #test API axios.post
   post 'place2',to: 'places#create'
   post 'city_information2', to: 'city_informations#create'
   post 'users/signup', to: 'users#create'
   post '/auth/login', to: 'authentication#login'
-  
   post 'orderCreate' , to: 'orders#create'
-#root path localhost:3000 --> render javascript/packs/hello_react.jsx
+
+  # API axios.delete
+  delete 'orderDelete/:id', to: 'orders#destroy'
+
+  #root path localhost:3000 --> render javascript/packs/hello_react.jsx
   root 'city_informations#index'
+  # root 'authentication#current_user'
   get '*path', to:'city_informations#index'
 end
