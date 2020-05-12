@@ -32,7 +32,6 @@ export default class Places extends Component {
         return (
             <div>
                {list_all_places}
-   
             </div>
         )
     }

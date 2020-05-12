@@ -8,7 +8,7 @@ export default class PackageCard extends Component {
   render() {
     let { id, destination, flight, hotel, plan, price } = this.props.package
     let planDay = plan.split(",")
-    let plans = planDay.map(ele => { return `${ele}` });
+    let plans = planDay.map(ele => { return `${ele}` })
     return (
       <Col md={4} className="mt-5">
         <Card style={{boxShadow: "5px 2px 10px 7px #d9d9d9"}}>
