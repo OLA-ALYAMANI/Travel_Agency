@@ -6,25 +6,26 @@ import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import Icon from "../../assets/images/undraw_add_to_cart_vkjp.png"
 
 export default class Order extends Component {
-    state = {
-        user: [],
-        package_id: [],
-        member: 8
-
+    state ={
+            user_id:1,
+            package_id:[],
+            member:8
+  
     }
     postOrder() {
         setTimeout(() => {
             console.log("test test")
             passCsrfToken(document, axios)
             axios.post(
-                "/orderCreate",
+                "/orderCreate.json",
                 this.state
-            ).then((res) => {
-                console.log(res)
-                // props.history.push('/home')
-            }).catch(erorr => {
-                console.log(erorr)
-            })
+              ).then((res)=>{
+                  console.log("order")
+                  console.log(res)
+            // props.history.push('/home')
+              }).catch(erorr=>{
+                  console.log(erorr)
+              })
         }, 1000)
         //back to package page
         // this.props.history.push('/package')
@@ -55,18 +56,19 @@ export default class Order extends Component {
     render() {
         return (
 
-            <Container md={6} className="mt-5" style={{ width: "80ex" }}>
+            <Container md={6} className="mt-5" style={{ width: "110ex" }}>
                 <Card style={{ textAlign: "center", marginTop: "30ex" }}>
                     <Row>
-                        <Col className="md-6">
+                        <Col className="md-4">
                             <img src={Icon} className="icon"/>
                             {/* <Card.Img src={Icon} alt="add" ></Card.Img> */}
                         </Col>
-                        <Col className="md-9">
+                        <Col className="md-8">
                             <Card.Body>
                                 <h1>Order</h1>
                                 <h3>  Order {this.state.package_id} Is In Your Shopping Card </h3>
-                                <Button as={Link} to="/Package" variant="warning" size="lg" className="mt-3">Back</Button>
+                                <Button as={Link} to="/shoppingCart" variant="warning" size="medium" className="mt-3 butmargin">See the cart</Button>
+                                <Button as={Link} to="/Package" variant="warning" size="medium" className="mt-3 butmargin">Back</Button>
                             </Card.Body>
                         </Col>
                     </Row>

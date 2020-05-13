@@ -52,7 +52,7 @@ export const Signup = (props) => {
                 Become a Traveler
               </h3>
               <Form className="register-form mr-3 ml-3">
-                <label ClassName="mt-5">Name</label>
+                <label className="mt-5">Name</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Name"
@@ -60,7 +60,7 @@ export const Signup = (props) => {
                   onChange={(e) => onChangeInput(e)}
                 />
 
-                <label ClassName="mt-5">Email</label>
+                <label className="mt-5">Email</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Email"
@@ -69,7 +69,7 @@ export const Signup = (props) => {
                   onChange={(e) => onChangeInput(e)}
                 />
 
-                <label ClassName="mt-5" >Password</label>
+                <label className="mt-5" >Password</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Password"
