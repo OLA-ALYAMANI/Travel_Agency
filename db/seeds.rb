@@ -19,5 +19,6 @@ Package.create(destination:'jeddah-neom',flight:'king abdulaizi airport',hotel:3
 Package.create(destination:'damam',flight:'king abdullah airport',hotel:2,plan:'day1:arriving,day2:lunch',price:5000)
 Package.create(destination:'Khobar',flight:'king abdulaizi airport',hotel:3,plan:'day1:arriving,day2:lunch',price:7000)
 package11=Package.create(destination:'makkah',flight:'king abdulaizi airport',hotel:3,plan:'day1:arriving,day2:lunch',price:4000)
-# User.create(name:'maram',email:'m@g.com',password_digest:'123321')
+User.create(name:'maram',email:'m@g.com',password:'123321',password_confirmation:'123321')
+
 # Order.create(user_id:5,package_id:3,member:23)

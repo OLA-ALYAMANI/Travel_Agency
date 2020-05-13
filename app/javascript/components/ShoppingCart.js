@@ -8,7 +8,7 @@ export default class ShoppingCard extends Component {
     _isMounted = false;
 
     state={
-        user_id:5,
+        user_id:1,
         foundOrder:[]
     }
 

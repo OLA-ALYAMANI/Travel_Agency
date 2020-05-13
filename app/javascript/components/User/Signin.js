@@ -58,7 +58,7 @@ useEffect(() => {
               </h3>
               <Form className="register-form mr-3 ml-3">
 
-                <label ClassName="mt-5">Email</label>
+                <label className="mt-5">Email</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Email"
@@ -67,7 +67,7 @@ useEffect(() => {
                   onChange={(e) => onChangeInput(e)}
                 />
 
-                <label ClassName="mt-5" >Password</label>
+                <label className="mt-5" >Password</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Password"
