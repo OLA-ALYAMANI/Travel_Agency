@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
- before_action :check_login, except: :create
- before_action :find_user, except: %i[create index]
+  before_action :check_login!, except: [:create, :user_info]
+#  before_action :find_user, except: %i[create index,user_info]
 
  # GET /users
  def index
@@ -13,8 +13,9 @@ class UsersController < ApplicationController
    render json: @user, status: :ok
  end
 
-def current_users
-  render json:  current_user , status: :ok
+ def user_info
+  @user = User.find(current_user.id)
+  render json:  @user , status: :ok
 end
 
  # POST /users
