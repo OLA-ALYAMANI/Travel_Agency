@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { passCsrfToken } from '../util/helpers'
 import axios from 'axios'
-import { Button } from 'react-bootstrap'
+import { Button, Col, Card, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import Icon from "../../assets/images/undraw_add_to_cart_vkjp.png"
 
 export default class Order extends Component {
     state = {
@@ -53,11 +54,24 @@ export default class Order extends Component {
     }
     render() {
         return (
-            <div style={{textAlign: "center"}}>
-                <h1>Order</h1>
-                <h3>  Order {this.state.package_id} Is In Your Shopping Card </h3>
-                <Button as={Link} to="/Package" variant="warning" className="ml-3 mb-5 big">Back</Button>
-            </div>
+
+            <Container md={6} className="mt-5" style={{ width: "80ex" }}>
+                <Card style={{ textAlign: "center", marginTop: "30ex" }}>
+                    <Row>
+                        <Col className="md-6">
+                            <img src={Icon} className="icon"/>
+                            {/* <Card.Img src={Icon} alt="add" ></Card.Img> */}
+                        </Col>
+                        <Col className="md-9">
+                            <Card.Body>
+                                <h1>Order</h1>
+                                <h3>  Order {this.state.package_id} Is In Your Shopping Card </h3>
+                                <Button as={Link} to="/Package" variant="warning" size="lg" className="mt-3">Back</Button>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>
+            </Container>
         )
     }
 }
