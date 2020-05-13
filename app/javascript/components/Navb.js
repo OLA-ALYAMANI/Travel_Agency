@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Logo from "./Tlogo.PNG";
 import { Navbar, Nav, Button, Form } from "react-bootstrap";
 export default class Navb extends Component {
+
   render() {
     console.log(localStorage.token);
     return (
@@ -67,4 +68,5 @@ export default class Navb extends Component {
       </div>
     );
   }
+
 }

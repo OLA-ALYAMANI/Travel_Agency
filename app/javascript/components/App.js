@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
-import Home from './Home'
+import Home from './home'
 import About from './About'
 import City from './City'
 import Footer from './Footer'
@@ -21,6 +21,7 @@ import Logout from './User/Logout'
 
 
 export default class App extends Component {
+
     componentDidMount() {
       // passCsrfToken(document, axios)
       // console.log("test token ")
@@ -61,6 +62,7 @@ export default class App extends Component {
             </div>
           </Router>
           {/* <Home></Home> */}
+
         </div>
       );
     }

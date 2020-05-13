@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-
+import axios from 'axios'
 
 var sectionStyle = {
     width: "100%",
@@ -10,6 +10,24 @@ var sectionStyle = {
 };
 export default class Home extends Component {
 
+    componentDidMount(){
+        // passCsrfToken(document, axios)
+        console.log("test token ")
+        //gets token from localstorage
+        let token = localStorage.getItem("token");
+        console.log("test token == "+token)
+    
+        axios.get('/auth/current_user', { 'headers': { 'Authorization':`Bearer ${token}` } })
+        .then(data =>{
+            console.log(data);
+            console.log(data.data.id);
+  
+        }).catch(erorr=>{
+            console.log(erorr.response);
+            
+        })
+        
+    }
     render() {
 
 
