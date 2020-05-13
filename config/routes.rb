@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'users/create'
   get 'users/show'
   # Api axios.get --> to take user_id 
-  get '/auth/current_user', to: 'authentication#current_user'
+  get '/auth/current_user', to: 'users#current_users'
 
   # API axios.post
   post 'place2',to: 'places#create'

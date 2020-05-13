@@ -12,6 +12,24 @@ var sectionStyle = {
 
 export default class Home extends Component {
 
+    componentDidMount(){
+        // passCsrfToken(document, axios)
+        console.log("test token ")
+        //gets token from localstorage
+        let token = localStorage.getItem("token");
+        console.log("test token == "+token)
+    
+        axios.get('/auth/current_user', { 'headers': { 'Authorization':`Bearer ${token}` } })
+        .then(data =>{
+            
+            console.log(data);
+  
+        }).catch(erorr=>{
+            console.log(erorr.response);
+            
+        })
+        
+    }
     render() {
 
 

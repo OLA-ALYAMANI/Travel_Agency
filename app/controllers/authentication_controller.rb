@@ -19,7 +19,6 @@ class AuthenticationController < ApplicationController
 
 
 
-
      private
    
      def login_params

@@ -13,6 +13,10 @@ class UsersController < ApplicationController
    render json: @user, status: :ok
  end
 
+def current_users
+  render json:  current_user , status: :ok
+end
+
  # POST /users
  def create
    @user = User.new(user_params)
@@ -23,6 +27,7 @@ class UsersController < ApplicationController
             status: :unprocessable_entity
    end
  end
+
 
  # PUT /users/{username}
  def update
