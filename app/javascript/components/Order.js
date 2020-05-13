@@ -4,10 +4,25 @@ import axios from 'axios'
 
 export default class Order extends Component {
     state ={
-            user_id:1,
+            user_id:'',
             package_id:[],
             member:8
   
+    }
+    getUserInformation=()=>{
+        let token = localStorage.getItem("token");
+    
+        axios.get('/auth/current_user', { 'headers': { 'Authorization':`Bearer ${token}` } })
+        .then(data =>{
+           this.setState({
+            user_id:data.data.id
+           })
+            console.log(data.data.id);
+  
+        }).catch(erorr=>{
+            console.log(erorr.response);
+            
+        })
     }
     postOrder(){
         setTimeout(() => {
@@ -28,6 +43,7 @@ export default class Order extends Component {
         // this.props.history.push('/package')
       }
     componentDidMount(){
+        this.getUserInformation()
         //1- list all package 
         axios.get('/package.json')
         .then(res =>{
@@ -54,6 +70,7 @@ export default class Order extends Component {
         return (
             <div>
                 <h1>Order</h1>
+              <h1>user Id = {this.state.user_id}</h1>
               <h3>  order id = {this.state.package_id}  Is In Your Shopping Card </h3>
             </div>
         )

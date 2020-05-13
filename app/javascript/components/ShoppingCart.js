@@ -8,13 +8,28 @@ export default class ShoppingCard extends Component {
     _isMounted = false;
 
     state={
-        user_id:1,
+        user_id:'',
         foundOrder:[]
     }
 
-
+    getUserInformation=()=>{
+        let token = localStorage.getItem("token");
+    
+        axios.get('/auth/current_user', { 'headers': { 'Authorization':`Bearer ${token}` } })
+        .then(data =>{
+           this.setState({
+            user_id:data.data.id
+           })
+            console.log(data.data.id);
+  
+        }).catch(erorr=>{
+            console.log(erorr.response);
+            
+        })
+    }
     componentDidMount(){
         this._isMounted = true;
+        this.getUserInformation()
         //Found order in DB
         axios.get('/orderList.json')
         .then(res =>{
