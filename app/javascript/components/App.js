@@ -44,7 +44,7 @@ export default class App extends Component {
         <Navb/>
         <Switch>
            <Route exact path='/' component ={Home}/>
-           <Route exact path='/home' component ={Home}/>
+           {/* <Route path='/home' component ={Home}/> */}
            <Route exact path="/About" component={About} />
 
           <Route exact path="/places/:id" component={Places} />
