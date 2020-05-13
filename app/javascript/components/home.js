@@ -1,15 +1,13 @@
 import React, { Component } from 'react'
-
 import {Button} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 var sectionStyle = {
     width: "100%",
-    height: "650px",
+    height: "89.5vh"
 
 };
-
 export default class Home extends Component {
 
     componentDidMount(){
@@ -37,7 +35,7 @@ export default class Home extends Component {
 
             <div>
 
-<div className="landing">
+            <div className="landing">
             
             <section style={sectionStyle}>
                 <div>
@@ -56,3 +54,4 @@ export default class Home extends Component {
         )
     }
 }
+

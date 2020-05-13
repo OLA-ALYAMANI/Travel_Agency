@@ -6,11 +6,9 @@ import { withRouter } from 'react-router-dom'
 var sectionStyle = {
     width: "100%",
     height: "650px",
-
 };
 export const Signin = (props) => {
 const [signin , setSignin] = useState({})
-
 
     let onChangeInput = ({target :{name , value}}) => {
         setSignin({ ...signin, [name]: value })
@@ -24,11 +22,10 @@ useEffect(() => {
         Axios.post('/auth/login', signin)
         .then(res =>{
             console.log(res.data.token)
-            if (res.data.token ){
-
-                localStorage.setItem('token' ,res.data.token )
-                // props.userLogin()
-                props.history.push('/home')
+            if (res.data.token) {
+                localStorage.setItem("token", res.data.token);
+                // props.history.push("/home");
+                window.location.href = "/home";
             }else {
 
                 console.log("email or password is not correct")
