@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
-
+import shoppingCart from './ShoppingCart'
 export default class ShoppingCartCard extends Component {
    _isMounted = false;
 
@@ -32,7 +32,9 @@ export default class ShoppingCartCard extends Component {
 
         componentWillUnmount(){
             this._isMounted = false;
+            
         }
+
 
  
        deleteOrderHandler=()=>{
@@ -44,11 +46,12 @@ export default class ShoppingCartCard extends Component {
             `/orderDelete/${id}.json`
             
           ).then((res)=>{
-              console.log(res)
-
+            
+            //   {this.props.history.push('/shoppingCart')}
           }).catch(erorr=>{
               console.log(erorr)
           })
+          
     }
 
 

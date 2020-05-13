@@ -50,7 +50,7 @@ export default class App extends Component {
           <Route exact path="/places/:id" component={Places} />
           <Route exact path="/new_post" component={Package} />
           <Route path="/orderPackage/:id" component={Order} />
-          <Route path="/shoppingCard" component={ShoppingCart} />
+          <Route path="/shoppingCart" component={ShoppingCart} />
           
           <Route exact path="/city" component={City} />
           <Route exact path="/package" component={Package} />

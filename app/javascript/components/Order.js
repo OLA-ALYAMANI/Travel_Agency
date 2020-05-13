@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export default class Order extends Component {
     state ={
-            user:[],
+            user_id:1,
             package_id:[],
             member:8
   
@@ -14,9 +14,10 @@ export default class Order extends Component {
             console.log("test test")
             passCsrfToken(document, axios)
             axios.post(
-                "/orderCreate",
+                "/orderCreate.json",
                 this.state
               ).then((res)=>{
+                  console.log("order")
                   console.log(res)
             // props.history.push('/home')
               }).catch(erorr=>{
