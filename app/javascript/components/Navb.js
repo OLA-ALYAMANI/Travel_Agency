@@ -8,7 +8,7 @@ export default class Navb extends Component {
         return (
             <div>
                 <Navbar bg="warning" >
-                    <Navbar.Brand href="#">
+                    <Navbar.Brand as={Link} to="/">
                      <img
                             alt=""
                             src={Logo}
@@ -19,7 +19,7 @@ export default class Navb extends Component {
                     Travel
                     </Navbar.Brand>
                     <Nav className="mr-auto">
-                        <Nav.Link as={Link} to="/">Home</Nav.Link>
+                        {/* <Nav.Link as={Link} to="/">Home</Nav.Link> */}
                         <Nav.Link as={Link} to="/Card">Card</Nav.Link>
                         <Nav.Link as={Link} to="/About">About</Nav.Link>
                         {/* <Nav.Link as={Link} to="/city">city</Nav.Link> */}
