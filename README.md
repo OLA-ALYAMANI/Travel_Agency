@@ -10,7 +10,7 @@ a Full-stack application for discovering kingdom Saudi Arabia city that provides
 
 
 ### Wireframes
-[waireframes](imageReadme/Homewaireframe.png)
+![waireframes](imageReadme/Homewaireframe.png)
 
 
 ###  Screenshot of the app
