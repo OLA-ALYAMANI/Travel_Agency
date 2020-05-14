@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
-import Home from './home'
+import Home from './Home'
 import About from './About'
 import City from './City'
 import Footer from './Footer'

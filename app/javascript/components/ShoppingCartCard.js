@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import axios from 'axios'
 import { passCsrfToken } from '../util/helpers'
 import shoppingCart from './ShoppingCart'
+import { Route, Switch, NavLink, Link } from 'react-router-dom'
+import { Form, Container, Button, Row, Col, Image, Card, CardDeck } from "react-bootstrap";
 export default class ShoppingCartCard extends Component {
    _isMounted = false;
 
@@ -61,15 +63,33 @@ export default class ShoppingCartCard extends Component {
 
         return (
             <div>
-                { this.state.flag &&( <>
-                <h1>Your Packege Order are ...</h1>
-                <h1>package title :{destination}</h1>
-                <h1>price :{price}</h1>
-                <h1>member :{this.props.order.member}</h1>
-                <h1>order id : {this.state.order_id}</h1>
-               <button onClick={this.deleteOrderHandler}>Delete order</button>
+           <Container fluid>
+            <Row className="justify-content-center" >
+             <Col md={4} className="mt-3 justify-content-center">
+             <Card>
+             <Card.Body className="justify-content-center">
+             { this.state.flag &&( <>
+                <Card.Title className={"text-center"} style={{fontSize: 30 ,backgroundColor: "rgb(255, 204, 0, 0.5)" }}>{destination.toUpperCase()}</Card.Title>
+                <Card.Text><h4>Package Cost {price} RS</h4></Card.Text>
+                <Card.Text><h4>{this.props.order.member} Member</h4></Card.Text>
+                <Card.Text><h4>order id: {this.state.order_id}</h4></Card.Text>
+                <Button
+                    as={Link}
+                    to="/shoppingCart"
+                    bg="light"
+                    variant="warning"
+                    className="ml-3 mb-5 big"
+                    onClick={this.deleteOrderHandler}
+                  >
+                    Delete order
+                  </Button>
               
                 </>)}
+             </Card.Body>
+             </Card>
+             </Col>
+             </Row>
+             </Container>
             </div>
         )
     }

@@ -9,14 +9,12 @@ var sectionStyle = {
 };
 export const Signin = (props) => {
 const [signin , setSignin] = useState({})
-
     let onChangeInput = ({target :{name , value}}) => {
         setSignin({ ...signin, [name]: value })
     }
 useEffect(() => {
     console.log(signin)
 })
-
     let onSubmit = (e) => {
         e.preventDefault()
         Axios.post('/auth/login', signin)
@@ -27,17 +25,12 @@ useEffect(() => {
                 // props.history.push("/home");
                 window.location.href = "/home";
             }else {
-
                 console.log("email or password is not correct")
             }
-            
-
-            
         })
         .catch(err => console.log(err))
     }
     return (
-
         <div>
         <div className="landings">
          <section style={sectionStyle}>
@@ -57,7 +50,6 @@ useEffect(() => {
                 Welcome back our Traveler
               </h3>
               <Form className="register-form mr-3 ml-3">
-
                 <label className="mt-5">Email</label>
                 <Form.Control 
                 className="mb-3 "
@@ -66,7 +58,6 @@ useEffect(() => {
                   name="email"
                   onChange={(e) => onChangeInput(e)}
                 />
-
                 <label className="mt-5" >Password</label>
                 <Form.Control 
                 className="mb-3 "
@@ -75,7 +66,6 @@ useEffect(() => {
                   name="password"
                   onChange={(e) => onChangeInput(e)}
                 />
-
                 <Button
                   block
                   className="btn-round  mt-3 mb-3"

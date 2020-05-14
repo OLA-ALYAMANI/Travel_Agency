@@ -17,7 +17,6 @@ A Full-stack application for discovering kingdom Saudi Arabia city that provides
 
 
 ### Entity Relationship Diagram (ERD)
-
 ### Catalog of routes 
 | route | method | Description |
 |:-----------|:---------------|-------------|

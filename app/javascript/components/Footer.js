@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <div className="autoMargin" >Made with &hearts; MOAM group</div>
+        <div className="autoMargin" >Made with &hearts; , Copyright MOAM Group © 2020 </div>
       </div>
     );
   }
