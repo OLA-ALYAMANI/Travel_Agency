@@ -1,45 +1,36 @@
 import React , {useState , useEffect} from 'react'
 import { Row, Form, Col, Button, Alert, Container , Card , Input } from 'react-bootstrap'
 import Axios from 'axios'
+import { withRouter } from 'react-router-dom'
 
 var sectionStyle = {
     width: "100%",
-    height: "612px",
-
+    height: "650px",
 };
 export const Signin = (props) => {
 const [signin , setSignin] = useState({})
-
-
     let onChangeInput = ({target :{name , value}}) => {
         setSignin({ ...signin, [name]: value })
     }
 useEffect(() => {
     console.log(signin)
 })
-
     let onSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/auth/login', signin)
+        Axios.post('/auth/login', signin)
         .then(res =>{
             console.log(res.data.token)
-            if (res.data.token ){
-
-                localStorage.setItem('token' ,res.data.token )
-                props.userLogin()
-                props.history.push('/home')
+            if (res.data.token) {
+                localStorage.setItem("token", res.data.token);
+                // props.history.push("/home");
+                window.location.href = "/home";
             }else {
-
                 console.log("email or password is not correct")
             }
-            
-
-            
         })
-        .catch(err => console.log(err.response))
+        .catch(err => console.log(err))
     }
     return (
-
         <div>
         <div className="landings">
          <section style={sectionStyle}>
@@ -59,8 +50,7 @@ useEffect(() => {
                 Welcome back our Traveler
               </h3>
               <Form className="register-form mr-3 ml-3">
-
-                <label ClassName="mt-5">Email</label>
+                <label className="mt-5">Email</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Email"
@@ -68,8 +58,7 @@ useEffect(() => {
                   name="email"
                   onChange={(e) => onChangeInput(e)}
                 />
-
-                <label ClassName="mt-5" >Password</label>
+                <label className="mt-5" >Password</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Password"
@@ -77,7 +66,6 @@ useEffect(() => {
                   name="password"
                   onChange={(e) => onChangeInput(e)}
                 />
-
                 <Button
                   block
                   className="btn-round  mt-3 mb-3"
@@ -98,4 +86,3 @@ useEffect(() => {
         </div>
     )
 }
-

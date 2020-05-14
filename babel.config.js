@@ -70,6 +70,7 @@ module.exports = function(api) {
           corejs: false
         }
       ],
+      
       [
         '@babel/plugin-transform-regenerator',
         {

@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     <Route path="/" component={App} />
 
     </Router>,
-    document.body.appendChild(document.createElement('div')),
+    document.body.appendChild(document.getElementById('root')),
   )
 })

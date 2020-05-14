@@ -43,33 +43,31 @@ export const Signup = (props) => {
       )}
       <Container className="mt-5 mb-5  mr-5 ml-5"  >
         <Row>
-        <Col className="ml-5 mr-5">
-             <h1>Warrning ... you will fall in love with this country</h1>
-        </Col>
+        <Col ><h1>Warrning ... you will fall in love with this country</h1></Col>
           <Col className="ml-5 mr-5" >
             <Card className="card-register ml-5 mr-5 mt-5" style={{ width: "30rem" }}>
               <h3 className="title mx-auto" style={{ fontSize: "34px" }}>
                 Become a Traveler
               </h3>
               <Form className="register-form mr-3 ml-3">
-                <label ClassName="mt-5">Name</label>
+                <label className="mt-5">Name</label>
                 <Form.Control 
-                className="mb-3 "
+                className="mb-3"
                   placeholder="Name"
                   name="name"
                   onChange={(e) => onChangeInput(e)}
                 />
 
-                <label ClassName="mt-5">Email</label>
+                <label>Email</label>
                 <Form.Control 
-                className="mb-3 "
                   placeholder="Email"
+                  className="mb-3 "
                   type="email"
                   name="email"
                   onChange={(e) => onChangeInput(e)}
                 />
 
-                <label ClassName="mt-5" >Password</label>
+                <label >Password</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Password"
@@ -97,4 +95,5 @@ export const Signup = (props) => {
         </div>
         </div>
     )
-}
+            }
+        
