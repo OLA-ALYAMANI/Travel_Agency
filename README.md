@@ -1,22 +1,23 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
 ## Travel Agency website
-a Full-stack application for discovring kingdom saudi arabia city that provide payed trip packages  
+### Idea
+a Full-stack application for discovering kingdom Saudi Arabia city that provides paid trip packages  
 
 
 
 
 
-### Frontend
-### waireframes
+
+### Wireframes
+[waireframes](imageReadme/Homewaireframe.png)
 
 
+###  Screenshot of the app
 
-###  screenshot of the app
 
-### Backend
 ### Entity Relationship Diagram (ERD)
-### catalog of routes 
+### Catalog of routes 
 | route | method | Description |
 |:-----------|:---------------|-------------|
 | `'city_information'` | `Get` | return all city information |
