@@ -23,17 +23,6 @@ import {Signin}  from './User/Signin'
 export default class App extends Component {
 
     componentDidMount() {
-      // passCsrfToken(document, axios)
-      // console.log("test token ")
-      // //gets token from localstorage
-      // let token = localStorage.getItem("token");
-      // console.log("test token == "+token)
-      // axios.get('/auth/current_user', { 'headers': { 'Authorization': token } })
-      // .then(data =>{
-      //     console.log(data);
-      // }).catch(erorr=>{
-      //     console.log(erorr);
-      // })
     }
     logout = () => {
       localStorage.clear();
