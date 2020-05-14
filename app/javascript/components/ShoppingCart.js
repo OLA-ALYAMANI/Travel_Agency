@@ -13,6 +13,8 @@ export default class ShoppingCard extends Component {
     }
 
     getUserInformation=()=>{
+        console.log('getUserInformation');
+        
         let token = localStorage.getItem("token");
     
         axios.get('/auth/current_user', { 'headers': { 'Authorization':`Bearer ${token}` } })
