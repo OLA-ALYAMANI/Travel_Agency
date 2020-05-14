@@ -39,9 +39,9 @@ useEffect(() => {
           the email used . please change the email
         </Alert>
       )} */}
-      <Container className="mt-5 mb-5  mr-5 ml-5"  >
+      <Container className=" mb-5  mr-5 ml-5"  >
         <Row>
-        <Col className="ml-5 mr-5">
+        <Col className=" mr-5">
              <h1>Travel Your Passion</h1>
         </Col>
           <Col className="ml-5 mr-5" >
@@ -58,7 +58,7 @@ useEffect(() => {
                   name="email"
                   onChange={(e) => onChangeInput(e)}
                 />
-                <label className="mt-5" >Password</label>
+                <label className="mt-2" >Password</label>
                 <Form.Control 
                 className="mb-3 "
                   placeholder="Password"

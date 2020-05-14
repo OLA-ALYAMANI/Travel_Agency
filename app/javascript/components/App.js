@@ -46,9 +46,9 @@ export default class App extends Component {
               <Route path="/signin" component={Signin} />
               <Route path="/signup" component={Signup} />
             </Switch>
-            <div className="landing">
-              <Footer />
-            </div>
+            
+              <Footer  />
+           
           </Router>
           {/* <Home></Home> */}
 

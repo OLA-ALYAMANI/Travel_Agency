@@ -41,7 +41,7 @@ export const Signup = (props) => {
           the email used . please change the email
         </Alert>
       )}
-      <Container className="mt-5 mb-5  mr-5 ml-5"  >
+      <Container className=" mb-5  mr-5 ml-5"  >
         <Row>
         <Col ><h1>Warrning ... you will fall in love with this country</h1></Col>
           <Col className="ml-5 mr-5" >
