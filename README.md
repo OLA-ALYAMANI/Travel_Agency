@@ -4,7 +4,10 @@
 ### Idea
 A Full-stack application for discovering kingdom Saudi Arabia city that provides paid trip packages  
 
-
+### Project Feature
+- user browse city information & famouse places in that city
+- website offers paid trip packages
+- user order packages (must be regesterd)
 
 
 
