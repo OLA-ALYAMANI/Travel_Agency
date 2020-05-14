@@ -12,6 +12,8 @@ import {
   Img,
   Card,
 } from "react-bootstrap";
+
+
 export default class CityCard extends Component {
   render() {
     let {

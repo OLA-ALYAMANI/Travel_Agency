@@ -6,21 +6,21 @@ import { CardText } from 'react-bootstrap/Card';
 
 export default class PackageCard extends Component {
   render() {
-    let { id, destination, flight, hotel, plan, price } = this.props.package
+    let { id, destination, flight, hotel, plan, price , image, } = this.props.package
     let planDay = plan.split(",")
     let plans = planDay.map(ele => { return `${ele}` })
     return (
-      <Col md={4} className="mt-5">
-        <Card style={{boxShadow: "5px 2px 10px 7px #d9d9d9"}}>
+
+      
+      <Col md={4} className="mt-5 justify-content-center">
+        <Card >
           <Card.Body>
-          {/* <h3>Plase</h3> */}
-          
-          <h2 style= {{ textAlign: "center"}}>{destination}</h2>
-          <h3>Pice</h3>
-          <h5 style={{marginLeft: "18px"}}>{price}</h5>
+          <Card.Title className={"text-center"} style={{fontSize: 30 ,backgroundColor: "rgb(255, 204, 0, 0.5)" }}>{destination.toUpperCase()}</Card.Title>
+          <Card.Text><h4>The Wonderful Plan</h4></Card.Text>
+          <Card.Text><h5 >{planDay.map(ele => <li>{ele}</li>)}</h5></Card.Text>
+          <Card.Text><h4>Package Cost</h4></Card.Text>
+          <Card.Text><h5>{price} RS</h5></Card.Text>
           {/* <h1>{id}</h1> */}
-          <h3>plan</h3>
-          <h5 >{planDay.map(ele => <li style={{ listStyleType: "none", marginLeft: "18px"}}>{ele}</li>)}</h5>
 
           <NavLink
             as={Link}
@@ -28,7 +28,7 @@ export default class PackageCard extends Component {
             className="btn btn-warning btn-block mb-3"
             variant="outline-warning"
           >
-            click buy
+            Book a Package
             </NavLink>
             </Card.Body>
         </Card>

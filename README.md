@@ -14,10 +14,13 @@ A Full-stack application for discovering kingdom Saudi Arabia city that provides
 
 
 ###  Screenshot of the app
-
-
+![screen](imageReadme/screen2.png)
+![screenhome](imageReadme/screenhome.png)
 ### Entity Relationship Diagram (ERD)
+![er](imageReadme/er.png)
 
+### Schema Diagram 
+![schema](imageReadme/schema.png)
 ### Catalog of routes 
 | route | method | Description |
 |:-----------|:---------------|-------------|

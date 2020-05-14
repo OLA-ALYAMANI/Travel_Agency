@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import ShoppingCartCard from './ShoppingCartCard'
-import {Button} from 'react-bootstrap'
+import {Button, Row} from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 export default class ShoppingCard extends Component {
@@ -62,13 +62,18 @@ export default class ShoppingCard extends Component {
         ))
  
         return (
-            <div>
-                {list_all_order}
+            <div>        
+                <Row className="mt-3 mb-3 justify-content-center" style={{ padding: "0" }}>
+            <h1>Your Packege Order</h1>
+            </Row>
+            {list_all_order}
                 <br></br>
              {/* {console.log("iuj")}
              {console.log(this.state.foundOrder)} */}
-
-                <Button as={Link} to="/" bg="light" variant="warning" className="ml-3 mb-5 big" style={{textAlign:"center" ,marginLeft:'90px'}}> Continue Payment</Button>
+     <Row className="mt-3 mb-3 justify-content-center" style={{ padding: "0" }}>
+     <Button as={Link} to="/" bg="light" variant="warning" className="ml-3 mb-5 big" style={{textAlign:"center" ,marginLeft:'90px'}}> Continue Payment</Button>
+            </Row>
+                
 
                 <br></br>
                 <br></br>

@@ -11,13 +11,13 @@ export default class PlaceCard extends Component {
         let {image, place, description} = this.props.place
         return (
             <div>
-                 <Container fluid>
-        <Row className="mt-5 justify-content-center" style={{ padding: "0" }}>
-        <Card bg="dark" text="light" className="mb-3" >
+                 <Container className="mb-5" fluid>
+        <Row  className="mt-5 justify-content-center" style={{ padding: "0" }}>
+        <Card border="warning" bg="dark" text="light" className="mb-3" style={{ width: "50rem"}} >
         <Card.Header  className="justify-content-center" style={{fontSize:25, textAlign:"center"}} >{place}</Card.Header>
           <Card.Img variant="top" src={`${image}`} style={{ width: "50rem", height: "30rem", }} />
           <Card.Body>
-            <Card.Text className="justify-content-center" style={{fontSize:20, textAlign:"center"}}>
+            <Card.Text style={{fontSize:15}}>
             {description}{" "}
             </Card.Text>
           </Card.Body>
