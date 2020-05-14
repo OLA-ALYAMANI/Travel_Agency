@@ -17,7 +17,7 @@ import { Switch, Route, Redirect, BrowserRouter as Router } from 'react-router-d
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import { SingUp } from './User/Signup'
 import {Signin}  from './User/Signin'
-import Logout from './User/Logout'
+// import Logout from './User/Logout'
 
 
 export default class App extends Component {
