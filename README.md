@@ -2,7 +2,7 @@
 
 ## Travel Agency website
 ### Idea
-a Full-stack application for discovering kingdom Saudi Arabia city that provides paid trip packages  
+A Full-stack application for discovering kingdom Saudi Arabia city that provides paid trip packages  
 
 
 
@@ -17,18 +17,19 @@ a Full-stack application for discovering kingdom Saudi Arabia city that provides
 
 
 ### Entity Relationship Diagram (ERD)
+
 ### Catalog of routes 
 | route | method | Description |
 |:-----------|:---------------|-------------|
 | `'city_information'` | `Get` | return all city information |
-| `'place'` | `Get` | return all city information |
-| `'package'` | `Get` | return all city information |
-| `'users/signup'` | `Post` | return all city information |
-| `'/auth/login'` | `Post` | return all city information |
-| `'/auth/current_user'` | `Get` | return all city information |
-| `'orderCreate'` | `Post` | return all city information |
-| `'orderList'` | `Get` | return all city information |
-| `'orderDelete/:id'` | `Delete` | return all city information |
+| `'place'` | `Get` | return all famous places in city information |
+| `'package'` | `Get` | return all trip package information |
+| `'users/signup'` | `Post` | siginup user |
+| `'/auth/login'` | `Post` | login user |
+| `'/auth/current_user'` | `Get` | return current user information |
+| `'orderCreate'` | `Post` | create order for user |
+| `'orderList'` | `Get` | return all order information for user |
+| `'orderDelete/:id'` | `Delete` | delete order information for user |
 
 ### Set up and installation instructions In your terminal
 ```
@@ -40,3 +41,6 @@ a Full-stack application for discovering kingdom Saudi Arabia city that provides
 - rails s
 ```
 ### Deployment link 
+```
+https://travel-agency-moam-team.herokuapp.com
+```
