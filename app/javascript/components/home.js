@@ -7,7 +7,6 @@ var sectionStyle = {
   width: "100%",
   height: "850px",
 };
-
 export default class Home extends Component {
 
   componentDidMount() {

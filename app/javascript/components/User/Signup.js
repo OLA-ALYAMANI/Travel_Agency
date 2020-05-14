@@ -4,13 +4,13 @@ import Axios from 'axios'
 
 var sectionStyle = {
     width: "100%",
-    height: "612px",
+    height: "650px",
 
 };
 export const Signup = (props) => {
     const [user, setUser] = useState({})// user info
     const [register , setRegister] = useState(false) // to show aleart
-  
+  console.log(user)
     //to add the input inside user
     let onChangeInput = ({ target: { name, value } }) => {
         setUser({ ...user, [name]: value })
@@ -18,7 +18,7 @@ export const Signup = (props) => {
     // to add the user info to database
     let onSubmit = (e) => {
         e.preventDefault()
-        Axios.post('http://localhost:3000/users/signup', user)
+        Axios.post('/users/signup', user)
             .then(res => {
                 console.log(res.data)
                     if (res.data){
